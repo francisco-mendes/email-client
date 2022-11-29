@@ -1,12 +1,19 @@
 <template>
-<div class = "antialiased text-slate-400 bg-slate-900">
-  <div class = "max-w-8xl mx-auto sm:px-4 sm:py-2 md:px-6 md:py-10">
-    <SideMenu />
+<div class = "antialiased bg-background w-screen h-screen">
+  <div class = "max-w-8xl mx-auto h-full divide grid justify-between">
+    <side-menu />
+    <div class = "bg-back-base"></div>
   </div>
 </div>
 </template>
 
-<script setup lang = "ts">
+<style scoped>
+.grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+</style>
 
+<script setup lang = "ts">
 import SideMenu from "@/components/SideMenu.vue";
 </script>
